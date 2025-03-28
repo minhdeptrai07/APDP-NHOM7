@@ -1,23 +1,23 @@
 {
   "format": 1,
   "restore": {
-    "D:\\SMS_APDP\\SMS_APDP.csproj": {}
+    "D:\\appdemo\\APDP-NHOM7\\SMS_APDP.csproj": {}
   },
   "projects": {
-    "D:\\SMS_APDP\\SMS_APDP.csproj": {
+    "D:\\appdemo\\APDP-NHOM7\\SMS_APDP.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\SMS_APDP\\SMS_APDP.csproj",
+        "projectUniqueName": "D:\\appdemo\\APDP-NHOM7\\SMS_APDP.csproj",
         "projectName": "SMS_APDP",
-        "projectPath": "D:\\SMS_APDP\\SMS_APDP.csproj",
-        "packagesPath": "C:\\Users\\ducse\\.nuget\\packages\\",
-        "outputPath": "D:\\SMS_APDP\\obj\\",
+        "projectPath": "D:\\appdemo\\APDP-NHOM7\\SMS_APDP.csproj",
+        "packagesPath": "C:\\Users\\minhk\\.nuget\\packages\\",
+        "outputPath": "D:\\appdemo\\APDP-NHOM7\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
         ],
         "configFilePaths": [
-          "C:\\Users\\ducse\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\minhk\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
@@ -44,12 +44,16 @@
           "auditLevel": "low",
           "auditMode": "direct"
         },
-        "SdkAnalysisLevel": "9.0.100"
+        "SdkAnalysisLevel": "9.0.200"
       },
       "frameworks": {
         "net8.0": {
           "targetAlias": "net8.0",
           "dependencies": {
+            "BCrypt.Net": {
+              "target": "Package",
+              "version": "[0.1.0, )"
+            },
             "Microsoft.AspNetCore.Session": {
               "target": "Package",
               "version": "[2.3.0, )"
@@ -98,7 +102,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.101/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.200/PortableRuntimeIdentifierGraph.json"
         }
       }
     }

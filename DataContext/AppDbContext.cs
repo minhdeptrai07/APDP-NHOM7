@@ -9,10 +9,10 @@ namespace SMS_APDP.DataContext
         public AppDbContext(DbContextOptions<AppDbContext> options) : base(options)
         {
         }
-        public DbSet<Models.User> Users { get; set; }
-        public DbSet<Models.Role> Roles { get; set; }
-        public DbSet<Models.Course> courses { get; set; }
-        public DbSet<Models.StudentCourse> studentCourses { get; set; }
+        public DbSet<User> Users { get; set; }
+        public DbSet<Role> Roles { get; set; }
+        public DbSet<Course> Courses { get; set; }
+        public DbSet<StudentCourse> StudentCourses { get; set; }
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
             modelBuilder.Entity<StudentCourse>()
