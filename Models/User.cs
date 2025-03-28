@@ -9,25 +9,29 @@ namespace SMS_APDP.Models
 
         [Required]
         [StringLength(100)]
-        public string Username { get; set; }
+        public string Email { get; set; }
 
         [Required]
         [StringLength(100)]
-        public string Password { get; set; }
+        public string PassWord { get; set; }
 
         [Required]
         [StringLength(50)]
-        public string Fullname { get; set; }
+        public string UserName { get; set; }
+
+        [Required]
+        [StringLength(50)]
+        public string FullName { get; set; }
 
         [Required]
         public int RoleId { get; set; }
 
-        public DateTime CreatedAt { get; set; }
+        public DateTime CreateDate { get; set; }
 
-        public DateTime LastLoginAt { get; set; }
+        //public DateTime? LastLoginAt { get; set; }
 
         public virtual Role? Role { get; set; }
         public virtual ICollection<StudentCourse>? StudentCourses { get; set; }
-
+        //public DateTime CreatedAt { get; internal set; }
     }
 }

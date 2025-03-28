@@ -4,16 +4,7 @@ namespace SMS_APDP.Repositories
 {
     public interface IUserRepository
     {
-        IEnumerable<User> GetAllUsers();
-
-        User GetUserById(int id);
-
-        User GetUserByUsernameAndPassword(string username, string password);
-
-        bool CreateUser(User user);
-
-        bool UpdateUser(User user);
-
-        bool DeleteUser(int id);
+        Task<User?> GetUserByUsernameAsync(string username);
+        Task<bool> CreateUserAsync(User user);
     }
 }

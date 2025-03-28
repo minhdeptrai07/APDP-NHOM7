@@ -41,7 +41,7 @@ namespace SMS_APDP.Migrations
 
                     b.HasKey("Id");
 
-                    b.ToTable("courses");
+                    b.ToTable("Courses");
                 });
 
             modelBuilder.Entity("SMS_APDP.Models.Role", b =>
@@ -52,7 +52,7 @@ namespace SMS_APDP.Migrations
 
                     SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
 
-                    b.Property<string>("Name")
+                    b.Property<string>("RoleName")
                         .IsRequired()
                         .HasMaxLength(100)
                         .HasColumnType("nvarchar(100)");
@@ -80,7 +80,7 @@ namespace SMS_APDP.Migrations
 
                     b.HasIndex("CourseId");
 
-                    b.ToTable("studentCourses");
+                    b.ToTable("StudentCourses");
                 });
 
             modelBuilder.Entity("SMS_APDP.Models.User", b =>
@@ -91,18 +91,20 @@ namespace SMS_APDP.Migrations
 
                     SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
 
-                    b.Property<DateTime>("CreatedAt")
+                    b.Property<DateTime>("CreateDate")
                         .HasColumnType("datetime2");
 
-                    b.Property<string>("Fullname")
+                    b.Property<string>("Email")
+                        .IsRequired()
+                        .HasMaxLength(100)
+                        .HasColumnType("nvarchar(100)");
+
+                    b.Property<string>("FullName")
                         .IsRequired()
                         .HasMaxLength(50)
                         .HasColumnType("nvarchar(50)");
 
-                    b.Property<DateTime>("LastLoginAt")
-                        .HasColumnType("datetime2");
-
-                    b.Property<string>("Password")
+                    b.Property<string>("PassWord")
                         .IsRequired()
                         .HasMaxLength(100)
                         .HasColumnType("nvarchar(100)");
@@ -110,10 +112,10 @@ namespace SMS_APDP.Migrations
                     b.Property<int>("RoleId")
                         .HasColumnType("int");
 
-                    b.Property<string>("Username")
+                    b.Property<string>("UserName")
                         .IsRequired()
-                        .HasMaxLength(100)
-                        .HasColumnType("nvarchar(100)");
+                        .HasMaxLength(50)
+                        .HasColumnType("nvarchar(50)");
 
                     b.HasKey("Id");
 

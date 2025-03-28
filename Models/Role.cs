@@ -9,7 +9,7 @@ namespace SMS_APDP.Models
 
         [Required]
         [StringLength(100)]
-        public string Name { get; set; }
+        public string RoleName { get; set; }
 
         public ICollection<User> Users { get; set; }
     }
